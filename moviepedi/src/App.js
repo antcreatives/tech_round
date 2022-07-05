@@ -36,6 +36,8 @@ useEffect(() => {
 }, [term]);
 
 
+
+
 console.log("value", filterData);
   return (
     <>
@@ -52,7 +54,7 @@ console.log("value", filterData);
           </div>
        <div style={{minHeight:"75vh"}}>
        <div style={{padding:"20px"}}>
-        <h3>Search for Movie</h3>
+        {term.trim()? <h3>"{term}" Movie</h3>: <h3>Search for Movie</h3>}
        <label style={{position:"relative"}} >
        <input type="search" style={{width:"250px",height:"40px",border: "3px solid #786DF6", paddingLeft:"25px"}}
         placeholder="Search for your favirote movie"
@@ -64,7 +66,7 @@ console.log("value", filterData);
        <div>
 
        <div className="movieCard">
-       { filterData ?
+       { 
 
           filterData  && term.trim() && filterData.map((item, index) => (
               <MovieCard
@@ -74,11 +76,11 @@ console.log("value", filterData);
                 type={item.type}
               />
           ))
-          :
-          <h2 style={{textAlign:"center",fontSize:"20px"}}>Welcome to MoviePedia</h2>
+          
           }
+          
        </div>
-        
+       {term.trim() ? null :  <h2 style={{textAlign:"center",fontSize:"25px"}}>Welcome to MoviePedia</h2>}
         
        
        </div>
