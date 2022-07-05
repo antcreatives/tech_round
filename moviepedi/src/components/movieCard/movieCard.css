@@ -1,0 +1,38 @@
+.card{
+    width: 433px;
+    background-color: #B2ACFA;
+    margin-top: 20px;
+    display: flex;
+    padding: 7px;
+}
+
+.card h1{
+    line-height: 10px;
+    margin-bottom: 0px;
+    font-size: 13px;
+}
+
+.card h2{
+    line-height: 10px;
+    margin-bottom: 0px;
+    font-size: 10px;
+}
+
+.card p{
+    line-height: 10px;
+    margin-bottom: 0px;
+    font-size: 12px;
+}
+
+.card img{
+    width: 100px;
+    height: 88px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+@media (max-width: 480px) {
+	.card{
+		width: 100%;
+	}
+}
