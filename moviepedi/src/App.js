@@ -17,6 +17,12 @@ const  App = () => {
        if(datum["name"].toLocaleLowerCase().includes(term.toLowerCase())){
         return true
        }
+       else if(datum["released_year"].toLocaleLowerCase().includes(term.toLowerCase())){
+        return true
+       }
+       else if(datum["type"].toLocaleLowerCase().includes(term.toLowerCase())){
+        return true
+       }
        return false
     });
     setFilterData(filtered)
